@@ -8,7 +8,7 @@ def main() -> None:
     print(f"Loaded {len(searches)} searches:")
 
     for search in searches:
-        print(f"- {search['keyword']}, max price: {search['max_price']}")
+        print(f"- {search.keyword}, max price: {search.max_price}")
 
 
 if __name__ == "__main__":
