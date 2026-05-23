@@ -1,0 +1,10 @@
+[project]
+name = "vinted-deal-finder"
+version = "0.1.0"
+description = "Backend service for finding underpriced resale clothing listings"
+requires-python = ">=3.9"
+dependencies = []
+
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
