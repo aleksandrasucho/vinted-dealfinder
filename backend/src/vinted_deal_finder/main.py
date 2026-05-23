@@ -1,4 +1,5 @@
 from vinted_deal_finder.config import load_searches
+from vinted_deal_finder.fetcher import fetch_listings
 
 
 def main() -> None:
@@ -8,7 +9,12 @@ def main() -> None:
     print(f"Loaded {len(searches)} searches:")
 
     for search in searches:
-        print(f"- {search.keyword}, max price: {search.max_price}")
+        print(f"\nSearching for {search.keyword}, max price: {search.max_price}")
+
+        listings = fetch_listings(search)
+
+        for listing in listings:
+            print(f"- {listing.title}: {listing.price} ({listing.url})")
 
 
 if __name__ == "__main__":
